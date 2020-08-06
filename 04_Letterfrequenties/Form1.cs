@@ -1,12 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace _04_Letterfrequenties
@@ -15,53 +8,57 @@ namespace _04_Letterfrequenties
     {
         int words = 0;
         int characters = 0;
-
-        int[] countChar = new int[255] ;
-
-        string text = "";
+        int[] countChar = new int[255];
 
         string NL = Environment.NewLine;
+        string text = "";
 
         public Form1()
         {
             InitializeComponent();
             PrintResult();
 
-            string defaultText = String.Format($"words:\t\t\t{words}{NL}characters:\t\t{characters}{NL}");
+            string defaultText = String.Format($"words:\t\t\t{words}{NL}characters:\t\t{characters}\n\r{NL}");
             textBox.Text = defaultText;
         }
 
         private void btnLoadFile_Click(object sender, EventArgs e)
         {
-            //string textfile = Directory.GetCurrentDirectory() + @"\file.txt";
+            //string textfile = Directory.GetParent(Directory.GetCurrentDirectory()) + @"\..\..\..\file.txt";
+
             string textfile = @"C:\Users\deploy\source\repos\04_Letterfrequenties\04_Letterfrequenties\file.txt";
             text = File.ReadAllText(textfile);
-        }
 
-        private void PrintFile()
-        {
             textBox.Text = text;
         }
 
         private void PrintResult()
         {
-            if (text != "") { foreach (char character in text) { countChar[character] += 1; } };
+            string output = "";
+            
+            if (text != "")
+            {
+                foreach (char character in text)
+                {
+                    countChar[character] += 1;
+                    output += $"| {character} : {countChar[character]} |";
+                }
+                output += $"{NL}";
+            }
 
-            foreach (int i in countChar) { Console.WriteLine(i) ; }
+            int i = 32;
+            while (i < countChar.Length)
+            {
+                output += $"{i - 32}\t[{(char)i}] =\t" + countChar[i] + $"{NL}";
+                i++;
+            }
 
-            string defaultText = String.Format($"words:\t\t\t{words}{NL}characters:\t\t{characters}{NL}{NL}");
-            textBox.Text = defaultText;
-        }
-
-        private void TEST_Click(object sender, EventArgs e)
-        {
-            Console.WriteLine("TEST");
-            PrintResult();
+            textBox.Text = output;
         }
 
         private void btnDisplayFile_Click(object sender, EventArgs e)
         {
-            PrintFile();
+            PrintResult();
         }
     }
 }
