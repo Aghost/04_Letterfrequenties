@@ -1,6 +1,3 @@
-<<<<<<< HEAD
 asdf
 C:\Users\v\source\repos\04_Letterfrequenties\04_Letterfrequenties\file.txt
-=======
 Hallo ik ben een tekstbestand.
->>>>>>> 0f03cb84746a6eb75d6d0b2336ef20e491824fff
