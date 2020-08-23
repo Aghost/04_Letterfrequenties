@@ -30,15 +30,15 @@
         {
             this.btnLoadFile = new System.Windows.Forms.Button();
             this.textBox = new System.Windows.Forms.TextBox();
-            this.TEST = new System.Windows.Forms.Button();
             this.btnDisplayFile = new System.Windows.Forms.Button();
+            this.btn_count = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnLoadFile
             // 
-            this.btnLoadFile.Location = new System.Drawing.Point(111, 12);
+            this.btnLoadFile.Location = new System.Drawing.Point(12, 12);
             this.btnLoadFile.Name = "btnLoadFile";
-            this.btnLoadFile.Size = new System.Drawing.Size(65, 62);
+            this.btnLoadFile.Size = new System.Drawing.Size(97, 62);
             this.btnLoadFile.TabIndex = 0;
             this.btnLoadFile.Text = "Load File";
             this.btnLoadFile.UseVisualStyleBackColor = true;
@@ -46,40 +46,41 @@
             // 
             // textBox
             // 
-            this.textBox.Location = new System.Drawing.Point(182, 12);
+            this.textBox.Location = new System.Drawing.Point(115, 12);
             this.textBox.Multiline = true;
             this.textBox.Name = "textBox";
             this.textBox.ReadOnly = true;
-            this.textBox.Size = new System.Drawing.Size(337, 313);
+            this.textBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.textBox.Size = new System.Drawing.Size(189, 313);
             this.textBox.TabIndex = 2;
-            // 
-            // TEST
-            // 
-            this.TEST.Location = new System.Drawing.Point(111, 263);
-            this.TEST.Name = "TEST";
-            this.TEST.Size = new System.Drawing.Size(65, 62);
-            this.TEST.TabIndex = 3;
-            this.TEST.Text = "test";
-            this.TEST.UseVisualStyleBackColor = true;
-            this.TEST.Click += new System.EventHandler(this.TEST_Click);
             // 
             // btnDisplayFile
             // 
-            this.btnDisplayFile.Location = new System.Drawing.Point(111, 131);
+            this.btnDisplayFile.Location = new System.Drawing.Point(12, 133);
             this.btnDisplayFile.Name = "btnDisplayFile";
-            this.btnDisplayFile.Size = new System.Drawing.Size(65, 62);
+            this.btnDisplayFile.Size = new System.Drawing.Size(97, 62);
             this.btnDisplayFile.TabIndex = 4;
             this.btnDisplayFile.Text = "Display File";
             this.btnDisplayFile.UseVisualStyleBackColor = true;
             this.btnDisplayFile.Click += new System.EventHandler(this.btnDisplayFile_Click);
             // 
+            // btn_count
+            // 
+            this.btn_count.Location = new System.Drawing.Point(12, 263);
+            this.btn_count.Name = "btn_count";
+            this.btn_count.Size = new System.Drawing.Size(97, 62);
+            this.btn_count.TabIndex = 4;
+            this.btn_count.Text = "Count Characters";
+            this.btn_count.UseVisualStyleBackColor = true;
+            this.btn_count.Click += new System.EventHandler(this.btnDisplayChars_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(531, 337);
+            this.ClientSize = new System.Drawing.Size(318, 337);
+            this.Controls.Add(this.btn_count);
             this.Controls.Add(this.btnDisplayFile);
-            this.Controls.Add(this.TEST);
             this.Controls.Add(this.textBox);
             this.Controls.Add(this.btnLoadFile);
             this.Name = "Form1";
@@ -93,8 +94,8 @@
 
         private System.Windows.Forms.Button btnLoadFile;
         private System.Windows.Forms.TextBox textBox;
-        private System.Windows.Forms.Button TEST;
         private System.Windows.Forms.Button btnDisplayFile;
+        private System.Windows.Forms.Button btn_count;
     }
 }
 
