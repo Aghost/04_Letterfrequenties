@@ -1,6 +1,6 @@
 ﻿namespace _04_Letterfrequenties
 {
-    partial class Form1
+    partial class Form
     {
         /// <summary>
         ///  Required designer variable.
@@ -30,7 +30,6 @@
         {
             this.btnLoadFile = new System.Windows.Forms.Button();
             this.textBox = new System.Windows.Forms.TextBox();
-            this.btnDisplayFile = new System.Windows.Forms.Button();
             this.btn_count = new System.Windows.Forms.Button();
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
             this.button1 = new System.Windows.Forms.Button();
@@ -48,27 +47,20 @@
             // 
             // textBox
             // 
+            this.textBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox.Location = new System.Drawing.Point(115, 12);
             this.textBox.Multiline = true;
             this.textBox.Name = "textBox";
             this.textBox.ReadOnly = true;
             this.textBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBox.Size = new System.Drawing.Size(189, 313);
+            this.textBox.Size = new System.Drawing.Size(602, 367);
             this.textBox.TabIndex = 2;
-            // 
-            // btnDisplayFile
-            // 
-            this.btnDisplayFile.Location = new System.Drawing.Point(12, 138);
-            this.btnDisplayFile.Name = "btnDisplayFile";
-            this.btnDisplayFile.Size = new System.Drawing.Size(97, 62);
-            this.btnDisplayFile.TabIndex = 4;
-            this.btnDisplayFile.Text = "Display File";
-            this.btnDisplayFile.UseVisualStyleBackColor = true;
-            this.btnDisplayFile.Click += new System.EventHandler(this.btnDisplayFile_Click);
             // 
             // btn_count
             // 
-            this.btn_count.Location = new System.Drawing.Point(12, 263);
+            this.btn_count.Location = new System.Drawing.Point(12, 80);
             this.btn_count.Name = "btn_count";
             this.btn_count.Size = new System.Drawing.Size(97, 62);
             this.btn_count.TabIndex = 4;
@@ -83,17 +75,17 @@
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 0;
             // 
-            // Form1
+            // Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(318, 337);
+            this.ClientSize = new System.Drawing.Size(729, 391);
             this.Controls.Add(this.btn_count);
-            this.Controls.Add(this.btnDisplayFile);
             this.Controls.Add(this.textBox);
             this.Controls.Add(this.btnLoadFile);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Name = "Form";
+            this.Text = "Letter Frequenties";
+            this.Load += new System.EventHandler(this.Form_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -103,7 +95,6 @@
 
         private System.Windows.Forms.Button btnLoadFile;
         private System.Windows.Forms.TextBox textBox;
-        private System.Windows.Forms.Button btnDisplayFile;
         private System.Windows.Forms.Button btn_count;
         private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog1;
         private System.Windows.Forms.Button button1;

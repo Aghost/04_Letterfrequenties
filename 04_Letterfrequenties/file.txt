@@ -1,3 +1,0 @@
-asdf
-C:\Users\v\source\repos\04_Letterfrequenties\04_Letterfrequenties\file.txt
-Hallo ik ben een tekstbestand.
